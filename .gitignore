@@ -1,0 +1,3 @@
+/postlist/*
+!/postlist/.gitkeep
+_config.php

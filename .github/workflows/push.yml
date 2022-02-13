@@ -1,0 +1,27 @@
+name: Push to server
+
+on:
+  push:
+    branches: [official-page]
+
+  workflow_dispatch:
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          server-dir: ${{ secrets.FTP_RDIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github*
+            **/.github*/**

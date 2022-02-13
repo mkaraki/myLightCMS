@@ -1,4 +1,5 @@
 <?php
+require_once "_config.php";
 $postid = $_GET['id'];
 if (!preg_match('/[a-z0-9]+/i', $postid)) {
     http_response_code(404);

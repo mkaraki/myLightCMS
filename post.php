@@ -22,7 +22,8 @@ require_once "postlist/$postid.php";
     <H1><?= $title ?></H1>
     <?= $content ?>
     <HR>
-    <?= $blog_title ?>
+    <?= $blog_title ?><BR>
+    <?= $owner ?? '' ?>
 </BODY>
 
 </HTML>

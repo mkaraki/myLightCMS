@@ -1,6 +1,8 @@
 <?php
 $title = 'Sample Post 01 - myLightCMS';
 
+$date = '2020-02-13';
+
 $content = <<<EOT
 <P>
     myLightCMS is a lightweight blog system written in PHP.

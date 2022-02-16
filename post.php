@@ -1,7 +1,7 @@
 <?php
 require_once "_config.php";
 $postid = $_GET['id'];
-if (!preg_match('/[a-z0-9]+/i', $postid)) {
+if (!preg_match('/^[a-z0-9]+$/i', $postid)) {
     http_response_code(404);
     die('Are you trying to hack me?');
 } else if (!file_exists('postlist/' . $postid . '.php')) {
